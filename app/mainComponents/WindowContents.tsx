@@ -15,23 +15,25 @@ import RantCard2 from "../cardComponents/rantCards/RantCard2.jsx";
 import RantCard3 from "../cardComponents/rantCards/RantCard3.jsx";
 import RantCard4 from "../cardComponents/rantCards/RantCard4.jsx";
 
+import { useState, useEffect, JSX } from 'react';
+
 export const VrrContent = ({
-  onCardClick}: {onCardClick: (component: JSX.Element) => void;}) => (
+  onCardClick1}: {onCardClick1: (component: JSX.Element) => void;}) => (
   <div className="space-y-4">
     <div className="grid grid-cols-2 gap-4">
-      <WhyVrrDetails onClick={() => onCardClick(<WhyVrrDetails />)} />
+      <WhyVrrDetails onClick={() => onCardClick1(<WhyVrrDetails onClick={() => {}} />)} />
     </div>
   </div>
 );
 
 export const AboutContent = ({
-  onCardClick,}: {onCardClick: (component: JSX.Element, title: string) => void;}) => (
+  onCardClick2,}: {onCardClick2: (component: JSX.Element, title: string) => void;}) => (
   <div className="space-y-4">
     <div className="grid grid-cols-2 gap-4">
-      <HowardCard onClick={() => onCardClick(<HowardDetails />, "Howard Ramos")}/>
-      <RgCard onClick={() => onCardClick(<RgDetails />, "Rg Vicenio")} />
-      <KhenCard onClick={() => onCardClick(<KhenDetails />, "Khen Ramos")} />
-      <JdCard onClick={() => onCardClick(<JayDeeDetails />, "JayDee Velayo")} />
+      <HowardCard onClick={() => onCardClick2(<HowardDetails />, "Howard Ramos")}/>
+      <RgCard onClick={() => onCardClick2(<RgDetails />, "Rg Vicenio")} />
+      <KhenCard onClick={() => onCardClick2(<KhenDetails />, "Khen Ramos")} />
+      <JdCard onClick={() => onCardClick2(<JayDeeDetails />, "JayDee Velayo")} />
     </div>
 
     <p className="text-gray-700 text-center">
