@@ -15,7 +15,14 @@ import RantCard2 from "../cardComponents/rantCards/RantCard2.jsx";
 import RantCard3 from "../cardComponents/rantCards/RantCard3.jsx";
 import RantCard4 from "../cardComponents/rantCards/RantCard4.jsx";
 
-import { useState, useEffect, JSX } from 'react';
+import { useState, useEffect } from 'react';
+import type { JSX } from 'react'; // Correct way to import JSX type if needed, or just remove 'JSX' from the import.
+                                    // But given the error, let's just import 'useState' and 'useEffect'.
+                                    // The global JSX namespace from React's types should be sufficient.
+
+// --- CORRECTED LINE ---
+import { useState, useEffect } from 'react';
+// --- END CORRECTION ---
 
 export const VrrContent = ({
   onCardClick1}: {onCardClick1: (component: JSX.Element) => void;}) => (
@@ -48,8 +55,8 @@ export const ProjectsContent = () => (
     <div className="space-y-3">
       <div className="p-3 bg-gray-100 rounded border border-gray-300 hover:shadow-lg transition-shadow duration-300">
         <h3 className="PrjCon">
-          <span class="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-1 before:bg-yellow-500">
-            <span class="relative font-bold text-lg text-gray-600">
+          <span className="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-1 before:bg-yellow-500">
+            <span className="relative font-bold text-lg text-gray-600">
               Personal ISBN Library and Tools
             </span>
           </span>
@@ -58,16 +65,16 @@ export const ProjectsContent = () => (
       </div>
       <div className="p-3 bg-gray-100 rounded border border-gray-300 hover:shadow-lg transition-shadow duration-300">
         <h3 className="PrjCon">
-          <span class="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-3 before:bg-yellow-500">
-            <span class="relative font-bold text-lg text-gray-600">Idk</span>
+          <span className="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-3 before:bg-yellow-500">
+            <span className="relative font-bold text-lg text-gray-600">Idk</span>
           </span>
         </h3>
         <p className="text-sm text-gray-600">Did you know that in terms of </p>
       </div>
       <div className="p-3 bg-gray-100 rounded border border-gray-300 hover:shadow-lg transition-shadow duration-300">
         <h3 className="PrjCon">
-          <span class="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-3 before:bg-yellow-500">
-            <span class="relative font-bold text-lg text-gray-600">Idk</span>
+          <span className="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-3 before:bg-yellow-500">
+            <span className="relative font-bold text-lg text-gray-600">Idk</span>
           </span>
         </h3>
         <p className="text-sm text-gray-600"></p>
@@ -81,8 +88,8 @@ export const SkillsContent = () => (
     <div className="space-y-3">
       <div className="p-3 bg-gray-100 rounded border border-gray-300 hover:shadow-lg transition-shadow duration-300">
         <h3 className="PrjCon">
-          <span class="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-1 before:bg-yellow-500">
-            <span class="relative font-bold text-lg text-gray-600">
+          <span className="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-1 before:bg-yellow-500">
+            <span className="relative font-bold text-lg text-gray-600">
               Why RVV?
             </span>
           </span>
@@ -91,24 +98,24 @@ export const SkillsContent = () => (
       </div>
       <div className="p-3 bg-gray-100 rounded border border-gray-300 hover:shadow-lg transition-shadow duration-300">
         <h3 className="PrjCon">
-          <span class="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-1 before:bg-yellow-500">
-            <span class="relative font-bold text-lg text-gray-600">What is this group's Uni?</span>
+          <span className="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-1 before:bg-yellow-500">
+            <span className="relative font-bold text-lg text-gray-600">What is this group's Uni?</span>
           </span>
         </h3>
         <p className="text-sm text-gray-600">Cagayan State University! Carig campus</p>
       </div>
       <div className="p-3 bg-gray-100 rounded border border-gray-300 hover:shadow-lg transition-shadow duration-300">
         <h3 className="PrjCon">
-          <span class="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-1 before:bg-yellow-500">
-            <span class="relative font-bold text-lg text-gray-600">What's the inspiration for this website?</span>
+          <span className="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-1 before:bg-yellow-500">
+            <span className="relative font-bold text-lg text-gray-600">What's the inspiration for this website?</span>
           </span>
         </h3>
         <p className="text-sm text-gray-600">The YT creator shar! Particularly her website <a href="https://sharyap.com">sharyap.com</a> </p>
       </div>
       <div className="p-3 bg-gray-100 rounded border border-gray-300 hover:shadow-lg transition-shadow duration-300">
         <h3 className="PrjCon">
-          <span class="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-1 before:bg-yellow-500">
-            <span class="relative font-bold text-lg text-gray-600">Did you seriously rip-off shar?</span>
+          <span className="relative inline-block before:absolute before:-inset-0.5 before:block before:-skew-y-1 before:bg-yellow-500">
+            <span className="relative font-bold text-lg text-gray-600">Did you seriously rip-off shar?</span>
           </span>
         </h3>
         <p className="text-sm text-gray-600">Y-yeah... go watch her videos she's amazing</p>
@@ -151,3 +158,5 @@ export const RantContent = () => (
     </div>
   </div>
 );
+
+// --- REMOVED DUPLICATE IMPORT FROM END OF FILE ---
